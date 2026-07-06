@@ -1,0 +1,40 @@
+clear
+echo " "
+echo "-----------------------AX78140/AX78120/MCS7840/MCS7820/MCS7810  INSTALL SCRIPT------------------------"
+echo "---------------------FOR LINUX `uname -r`----------------------"
+echo " "
+if(ls mos7840.ko >>/dev/null) then
+	#if(grep "modprobe usbserial" /etc/rc.local >> /dev/null) then
+		#echo "usbserial already Installed !!!"
+	#else
+		echo "modprobe usbserial" >> /etc/rc.local
+		modprobe usbserial >> /dev/null
+		echo "installed"
+	#fi
+
+	#if(grep "modprobe lp" /etc/rc.local >>/dev/null) then
+	# 	echo "lp already Installed !!!"
+	#else
+	#	echo "modprobe lp" >> /etc/rc.local
+	# 	modprobe lp >> /dev/null
+	# 	echo "installed"
+	#fi
+
+
+	#if(grep "insmod /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko" /etc/rc.local >>/dev/null) then
+	if (ls /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko >>/dev/null) then		
+		cp -f mos7840.ko /lib/modules/`uname -r`/kernel/drivers/usb/serial >> /dev/null
+		echo "insmod /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko" >> /etc/rc.local 
+		insmod /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko >> /etc/rc.local		
+		echo "mos7840 Driver already Installed"
+	else
+		mkdir /lib/modules/`uname -r`/kernel/drivers/usb/serial >>/dev/null
+		cp -f mos7840.ko /lib/modules/`uname -r`/kernel/drivers/usb/serial >> /dev/null
+		echo "insmod /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko" >> /etc/rc.local 
+		insmod /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko >> /etc/rc.local
+		echo "mos7840 Driver Installed"
+	fi
+fi
+echo " "
+echo "-----------------------Thanks for using AX78140/AX78120/MCS7840/MCS7820/MCS7810 Driver-------------------"
+echo " "

@@ -1,0 +1,24 @@
+tempfile=$HOME/mostemp
+
+clear
+echo " "
+echo "-----------------------AX78140/AX78120/MCS7840/MCS7820/MCS7810 UNINSTALL SCRIPT------------------------"
+echo "---------------------FOR LINUX `uname -r`----------------------"
+echo " "
+
+
+if (ls /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko 2>/dev/null) then
+	rm -rf /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko
+    echo "MOS_UNINSTALL : mos7840.ko removed "
+	rmmod mos7840
+	more /etc/rc.local | grep -v "insmod /lib/modules/`uname -r`/kernel/drivers/usb/serial/mos7840.ko" > $tempfile
+	cp $tempfile /etc/rc.local
+	rm -f $tempfile
+
+else
+    echo "MOS_UNINSTALL Failed: mos7840.ko File doesn't exists"
+fi
+
+echo " "
+echo "-----------------------Thanks for using AX78140/AX78120/MCS7840/MCS7820/MCS7810 Driver-------------------"
+echo " "
