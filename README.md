@@ -1,5 +1,25 @@
+# ASIX AX781x0 USB to Serial/UART/Parallel Linux driver (`mos7840.ko`)
 
+Official ASIX AX781x0 USB to Serial/UART/Parallel Linux driver source for AX78140, AX78120, MCS78x0 controllers. (Kernel module name: `mos7840.ko`)
 
+---
+## ASIX USB 2.0 to Serial/UART/Parallel I/O bridge ICs 
+- [AX78140 USB 2.0 to Multi I/O (4S, 2S+1P) Controllers](https://www.asix.com.tw/en/product/Interface/USB_Bridge/AX78140)
+- [AX78120 USB 2.0 to Multi I/O (2S, 1S) Controllers](https://www.asix.com.tw/en/product/Interface/USB_Bridge/AX78120)
+
+### Supported USB 2.0 to Multi-I/O (4S, 2S+1P, 2S, 1S) modes
+- **AX78140 4S** : USB 2.0 to 4 serial/UART ports
+- **AX78140 2S+1P** : USB 2.0 to 2 serial/UART ports + 1 parallel port
+- **AX78120 2S** : USB 2.0 to 2 serial/UART ports 
+- **AX78120 1S** : USB 2.0 to 1 serial/UART port
+
+### Supported USB 2.0 to Serial/UART/Parallel Interfaces
+| IC | USB VID:PID | `bcdDevice` | Interfaces |
+|----|-------------|-------------|-----------|
+| **AX78140, MCS7840** | `9710:7840` | —        | AX78140 USB 2.0 to 4S/2S1P Ports |
+| **AX78120, MCS7820** | `9710:7820` | —        | AX78120 USB 2.0 to 2S/1S Ports |
+
+---
 Configuration instructions:
 -----------------------------
 
