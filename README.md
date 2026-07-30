@@ -16,8 +16,8 @@ Official ASIX AX781x0 USB to Serial/UART/Parallel Linux driver source for AX7814
 ### Supported USB 2.0 to Serial/UART/Parallel Interfaces
 | IC | USB VID:PID | `bcdDevice` | Interfaces |
 |----|-------------|-------------|-----------|
-| **AX78140, MCS7840** | `9710:7840` | —        | AX78140 USB 2.0 to 4S/2S1P Ports |
-| **AX78120, MCS7820** | `9710:7820` | —        | AX78120 USB 2.0 to 2S/1S Ports |
+| **AX78140, MCS7840** | `9710:7840` | —        | USB 2.0 to 4S/2S1P Ports |
+| **AX78120, MCS7820** | `9710:7820` | —        | USB 2.0 to 2S/1S Ports |
 
 ---
 Configuration instructions:
