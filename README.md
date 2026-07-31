@@ -1,6 +1,6 @@
 # ASIX AX781x0 USB to Serial/UART/Parallel Linux driver (`mos7840.ko`)
 
-This is the official ASIX AX781x0 USB to Serial/UART/Parallel Linux driver for AX78140, AX78120, MCS78x0 controllers (module name: `mos7840.ko`), which is suitable for USB 2.0 I/O bridge applications including USB to UART/RS‑232/RS-422/RS‑485 serial converters, USB parallel (LPT) printer adapters, USB Data Acquisition (DAQ) modules, industrial computers, automation systems, measurement instruments, medical devices, and POS terminals. 
+This is the official **ASIX AX781x0 USB to Serial/UART/Parallel Linux driver** for AX78140, AX78120, MCS78x0 controllers (module name: `mos7840.ko`), which is suitable for USB 2.0 I/O bridge applications including USB to UART/RS‑232/RS-422/RS‑485 serial converters, USB parallel (LPT) printer adapters, USB Data Acquisition (DAQ) modules, industrial computers, automation systems, measurement instruments, medical devices, and POS terminals. 
 
 ---
 ## ASIX USB 2.0 to Serial/UART/Parallel I/O bridge ICs 
